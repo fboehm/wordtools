@@ -1,0 +1,13 @@
+Package: wordtools
+Type: Package
+Title: Tools for Manipulating Texts
+Version: 0.1.0
+Author: Fred Boehm
+Maintainer: Fred Boehm <frederick.boehm@gmail.com>
+Description: Tools for manipulating texts from text files for analyses such as topic modeling
+License: MIT License
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Depends: R (>= 3.1.0)
+Imports:
+    stringr
