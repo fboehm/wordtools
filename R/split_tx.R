@@ -19,15 +19,26 @@ split_tx <- function(tx, patt = "285 DOCUMENTS"){
   return(outer)
 }
 
-#' Wrapper to partition text file into multiple articles AND to remove unneeded text at top & bottom of each article
+#' Remove unneeded text at top & bottom of each article
 #'
 #' @param tx a character vector, resulting from reading, one entry per line, from a text file
-#' @param patt pattern denoting start of a new article
 #' @param headskip number of lines at top of each article to remove
 #' @param tailskip number of lines at bottom of each article to remove
 #' @export
-split_tx_trim <- function(tx, patt, headskip = 0, tailskip = 0){
-  splitted <- split_tx(tx, patt)
-  out <- lapply(X = splitted, FUN = function(x)x[-c(1:headskip, (length(x) - tailskip + 1):length(x))])
+trim_tx <- function(tx, headskip = 0, tailskip = 0){
+  out <- tx[-c(1:headskip, (length(tx) - tailskip + 1):length(tx))]
   return(out)
 }
+
+
+#' Flag transcript (a character vector) for whether it contains a key phrase
+#'
+#' @param tx a transcript or article that is a character vector
+#' @param filter_vector a character vector containing key phrase(s)
+#' @export
+flag_tx <- function(tx, filter_vector = "All Rights Reserved"){
+  tx_collapse <- paste(tx, collapse = " ")
+  out <- stringr::str_detect(string = tx_collapse, pattern = filter_vector)
+  return(sum(out) > 0) # logical to indicate whether one or more of the key phrases is in the transcript
+}
+
