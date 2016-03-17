@@ -2,7 +2,7 @@
 % Please edit documentation in R/split_tx.R
 \name{trim_tx}
 \alias{trim_tx}
-\title{Remove unneeded text at top & bottom of each article}
+\title{Remove unneeded lines of text at top & bottom of each article}
 \usage{
 trim_tx(tx, headskip = 0, tailskip = 0)
 }
@@ -14,6 +14,6 @@ trim_tx(tx, headskip = 0, tailskip = 0)
 \item{tailskip}{number of lines at bottom of each article to remove}
 }
 \description{
-Remove unneeded text at top & bottom of each article
+Remove unneeded lines of text at top & bottom of each article
 }
 

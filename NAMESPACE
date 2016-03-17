@@ -2,4 +2,5 @@
 
 export(flag_tx)
 export(split_tx)
+export(trim_pattern)
 export(trim_tx)
