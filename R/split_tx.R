@@ -34,6 +34,7 @@ trim_tx <- function(tx, headskip = 0, tailskip = 0){
 #'
 #' @param string the character vector in which to look for pattern
 #' @param pattern the pattern to find in the strings
+#' @param end latter index for subset to be removed
 #' @export
 trim_pattern <- function(string, pattern, end = length(string)){
   start <- which(stringr::str_detect(string = string, pattern = pattern))
