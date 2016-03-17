@@ -4,7 +4,7 @@
 #' @param patt a character vector that is the pattern denoting the start of a new article
 #' @return a list with length equal to the number of distinct articles
 #' @export
-split_tx <- function(tx, patt = "285 DOCUMENTS"){
+split_tx <- function(tx, patt = "Copyright 2012"){
   counter <- 0
   outer <- list()
   inner <- vector(mode = "character")
@@ -19,7 +19,7 @@ split_tx <- function(tx, patt = "285 DOCUMENTS"){
   return(outer)
 }
 
-#' Remove unneeded text at top & bottom of each article
+#' Remove unneeded lines of text at top & bottom of each article
 #'
 #' @param tx a character vector, resulting from reading, one entry per line, from a text file
 #' @param headskip number of lines at top of each article to remove
@@ -28,6 +28,16 @@ split_tx <- function(tx, patt = "285 DOCUMENTS"){
 trim_tx <- function(tx, headskip = 0, tailskip = 0){
   out <- tx[-c(1:headskip, (length(tx) - tailskip + 1):length(tx))]
   return(out)
+}
+
+#' Find a pattern in an element of a character vector to identify where to start trimming & trim
+#'
+#' @param string the character vector in which to look for pattern
+#' @param pattern the pattern to find in the strings
+#' @export
+trim_pattern <- function(string, pattern, end = length(string)){
+  start <- which(stringr::str_detect(string = string, pattern = pattern))
+  return(string[-c(start:end)])
 }
 
 
