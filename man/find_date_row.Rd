@@ -4,7 +4,13 @@
 \alias{find_date_row}
 \title{Find the row, for one article, in which the date is listed}
 \usage{
-find_date_row(x)
+find_date_row(x, format = "\%B \%d, \%Y")
+}
+\arguments{
+\item{x}{a vector}
+}
+\value{
+a number, the index of the first entry of x that is a date
 }
 \description{
 Find the row, for one article, in which the date is listed
