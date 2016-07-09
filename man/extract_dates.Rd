@@ -4,12 +4,14 @@
 \alias{extract_dates}
 \title{Extract dates from lexis nexis downloads}
 \usage{
-extract_dates(filename, end_of_article = "All Rights Reserved")
+extract_dates(filename, end_of_article = "All Rights Reserved", skip = 11)
 }
 \arguments{
 \item{filename}{a character string that is the full path to the file}
 
 \item{end_of_article}{a character string that denotes the pattern at the end of each article}
+
+\item{skip}{number of lines to skip at top of file}
 }
 \value{
 a date vector

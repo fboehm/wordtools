@@ -11,13 +11,13 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 #'
 #' @param filename a character string that is the full path to the file
 #' @param end_of_article a character string that denotes the pattern at the end of each article
+#' @param skip number of lines to skip at top of file
 #' @return a date vector
 #' @export
-extract_dates <- function(filename, end_of_article = "All Rights Reserved"
-){
+extract_dates <- function(filename, end_of_article = "All Rights Reserved", skip = 11){
   dat <- scan(filename,
               what = "character", blank.lines.skip = TRUE,
-              sep = "\n", encoding = "UTF-8", skipNul = TRUE)
+              sep = "\n", encoding = "UTF-8", skipNul = TRUE, skip = skip)
   article_list <- wordtools::split_tx(dat, patt = end_of_article)
   # find row number with dates
   date_row <- sapply(FUN = function(x){
