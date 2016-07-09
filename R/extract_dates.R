@@ -21,7 +21,7 @@ extract_dates <- function(filename, end_of_article = "All Rights Reserved"
   article_list <- wordtools::split_tx(dat, patt = end_of_article)
   # find row number with dates
   date_row <- sapply(FUN = function(x){
-    which(!is.na(lubridate::as_date(trim(x), format = "%B %d, %Y")))[1]
+    find_date_row(x)
   },
   X = article_list)
   #
