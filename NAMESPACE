@@ -3,6 +3,7 @@
 export(extract_dates)
 export(find_date_row)
 export(flag_tx)
+export(is_blog)
 export(is_date)
 export(remove_urls)
 export(split_tx)
