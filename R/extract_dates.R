@@ -17,7 +17,7 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 extract_dates <- function(filename, end_of_article = "All Rights Reserved", skip = 11){
   dat <- scan(filename,
               what = "character", blank.lines.skip = TRUE,
-              sep = "\n", encoding = "UTF-8", skipNul = TRUE, skip = skip)
+              sep = "\n", encoding = "UTF-8", skipNul = TRUE, skip = 0)
   article_list <- wordtools::split_tx(dat, patt = end_of_article)
   # find row number with dates
   date_row <- sapply(FUN = function(x){
@@ -33,3 +33,13 @@ extract_dates <- function(filename, end_of_article = "All Rights Reserved", skip
   return(dates)
 }
 
+
+#' Determine whether a given article (from lexis nexis) is a blog post
+#'
+#' @param x a character vector containing text for a single article
+#' @param patt pattern that says that an article is a blog
+#' @export 
+
+is_blog <- function(x, patt = "PUBLICATION-TYPE: Web Blog"){
+  sum(stringr::str_detect(x, patt)) == 1
+}
