@@ -4,6 +4,7 @@
 #' @param patt a character vector that is the pattern denoting the start of a new article
 #' @return a list with length equal to the number of distinct articles
 #' @export
+#'
 split_tx <- function(tx, patt = "Copyright 2012"){
   counter <- 0
   outer <- list()
