@@ -2,6 +2,7 @@
 
 export(extract_dates)
 export(extract_hashtags)
+export(extract_urls)
 export(find_date_row)
 export(flag_tx)
 export(is_blog)

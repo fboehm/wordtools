@@ -1,7 +1,7 @@
 #' Extract URLs from a text file that contains database query results (such as Proquest)
 #'
 #' @param file a character vector that specifies the filename
-#'
+#' @export
 
 extract_urls <- function(file){
   search_results <- readLines(file)
