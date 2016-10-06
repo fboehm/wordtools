@@ -7,7 +7,7 @@
 scrape_node <- function(urls, node = ".timestamp__date--published"){
   out <- list()
   for (i in 1:length(urls)){
-    try(rvest::read_html(urls[i]), silent = TRUE) -> foo
+    try(xml2::read_html(urls[i]), silent = TRUE) -> foo
     if (class(foo) == "try-error"){
       out[i] <- NA
     } else
