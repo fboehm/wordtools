@@ -9,7 +9,9 @@ Description: Tools for manipulating texts from text files for analyses such as t
 License: MIT License
 LazyData: TRUE
 RoxygenNote: 5.0.1
-Depends: R (>= 3.1.0)
+Depends: R (>= 3.1.0),
+    dplyr
 Imports:
     stringr,
-    lubridate
+    lubridate,
+    dplyr

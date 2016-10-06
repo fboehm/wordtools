@@ -5,8 +5,8 @@
 
 extract_urls <- function(file){
   search_results <- readLines(file)
-  url_lines <- search_results[str_detect(string = search_results, pattern = "URL:")]
-  list_urls<- str_split(string = url_lines, pattern = "URL: ")
+  url_lines <- search_results[stringr::str_detect(string = search_results, pattern = "URL:")]
+  list_urls<- stringr::str_split(string = url_lines, pattern = "URL: ")
   urls <- sapply(FUN = function(x)x[2], X = list_urls)
   return(urls)
 }
