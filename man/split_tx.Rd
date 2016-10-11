@@ -9,7 +9,7 @@ split_tx(tx, patt = "Copyright 2012")
 \arguments{
 \item{tx}{a character vector resulting from scan() of a text file containing multiple articles}
 
-\item{patt}{a character vector that is the pattern denoting the start of a new article}
+\item{patt}{a character vector that is the pattern denoting the end of each article/story}
 }
 \value{
 a list with length equal to the number of distinct articles
