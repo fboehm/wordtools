@@ -8,6 +8,8 @@ find_date_row(x, format = "\%B \%d, \%Y")
 }
 \arguments{
 \item{x}{a vector}
+
+\item{format}{a character vector of length one specifying the date format}
 }
 \value{
 a number, the index of the first entry of x that is a date

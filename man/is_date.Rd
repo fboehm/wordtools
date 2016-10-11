@@ -8,6 +8,8 @@ is_date(x, format = "\%B \%d, \%Y")
 }
 \arguments{
 \item{x}{an input vector}
+
+\item{format}{a character vector of length one specifying the date format}
 }
 \value{
 a logical vector

@@ -1,6 +1,7 @@
 #' Find the row, for one article, in which the date is listed
 #'
 #' @param x a vector
+#' @param format a character vector of length one specifying the date format
 #' @return a number, the index of the first entry of x that is a date
 #' @export
 
@@ -18,6 +19,7 @@ find_date_row <- function(x, format = "%B %d, %Y"){
 #' Returns a logical to indicate whether input is a date, per a specific format
 #'
 #' @param x an input vector
+#' @param format a character vector of length one specifying the date format
 #' @return a logical vector
 #' @export
 
