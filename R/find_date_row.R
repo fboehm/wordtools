@@ -10,7 +10,7 @@ find_date_row <- function(x, format = "%B %d, %Y"){
   i <- 0
   while(!indic){
     i <- i + 1
-    indic <- is_date(x[i], format = format)
+    indic <- is_date(trim(x[i]), format = format)
   }
   return(i)
 }
