@@ -24,7 +24,7 @@ find_date_row <- function(x, format = "%B %d, %Y"){
 #' @export
 
 is_date <- function(x, format = "%B %d, %Y"){
-  !is.na(lubridate::as_date(x, format = format))
+  !is.na(lubridate::as_date(wordtools::trim(x), format = format))
 }
 
 #' Tabulate a vector of dates
