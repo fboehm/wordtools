@@ -5,6 +5,8 @@
 #' @param tailskip number of lines at bottom of each article to remove
 #' @export
 trim_tx <- function(tx, headskip = 0, tailskip = 0){
-  out <- tx[-c(0:headskip, (length(tx) - tailskip + 1):length(tx))] # I changed 1:headskip to 0:headskip
+  out <- tx[-c(0:headskip, (length(tx) - tailskip + 1):length(tx))]
   return(out)
 }
+
+# Changed 1:headskip to 0:headskip on line 8
