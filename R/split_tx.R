@@ -5,13 +5,13 @@
 #' @return a list with length equal to the number of distinct articles
 #' @export
 #'
-split_tx <- function(tx, patt = "Copyright 2012"){
+split_tx <- function(tx, pattern){
   counter <- 0
   outer <- list()
   inner <- vector(mode = "character")
   for (i in 1:length(tx)){
     inner <- append(inner, tx[i])
-    if(stringr::str_detect(tx[i], patt)){
+    if(stringr::str_detect(tx[i], pattern)){
       counter <- counter + 1
       outer[[counter]] <- inner
       inner <- vector(mode = "character")
