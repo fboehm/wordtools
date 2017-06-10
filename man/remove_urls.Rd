@@ -12,4 +12,3 @@ remove_urls(string)
 \description{
 Remove strings that contain ://
 }
-

@@ -17,4 +17,3 @@ a number, the index of the first entry of x that is a date
 \description{
 Find the row, for one article, in which the date is listed
 }
-

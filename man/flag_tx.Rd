@@ -14,4 +14,3 @@ flag_tx(tx, filter_vector = "All Rights Reserved")
 \description{
 Flag transcript (a character vector) for whether it contains a key phrase
 }
-

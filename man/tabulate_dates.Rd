@@ -14,4 +14,3 @@ tabulate_dates(directory, end_of_article = "All Rights Reserved")
 \description{
 Tabulate a vector of dates
 }
-

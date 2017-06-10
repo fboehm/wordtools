@@ -15,4 +15,3 @@ a character vector without preceding and trailing whitespace
 \description{
 Remove extra white spaces before and after text.
 }
-

@@ -14,4 +14,3 @@ scrape_node(urls, node = ".timestamp__date--published")
 \description{
 Scrape webpage & extract a single node for online media
 }
-

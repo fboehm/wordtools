@@ -12,4 +12,3 @@ extract_urls(file)
 \description{
 Extract URLs from a text file that contains database query results (such as Proquest)
 }
-

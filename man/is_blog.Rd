@@ -14,4 +14,3 @@ is_blog(x, patt = "PUBLICATION-TYPE: Web Blog")
 \description{
 Determine whether a given article (from lexis nexis) is a blog post
 }
-

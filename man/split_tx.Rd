@@ -4,7 +4,7 @@
 \alias{split_tx}
 \title{Partition a text file, containing multiple articles or transcripts, into distinct articles}
 \usage{
-split_tx(tx, patt = "Copyright 2012")
+split_tx(tx, pattern)
 }
 \arguments{
 \item{tx}{a character vector resulting from scan() of a text file containing multiple articles}
@@ -17,4 +17,3 @@ a list with length equal to the number of distinct articles
 \description{
 Partition a text file, containing multiple articles or transcripts, into distinct articles
 }
-

@@ -12,4 +12,3 @@ table_dates(dates)
 \description{
 Table dates
 }
-

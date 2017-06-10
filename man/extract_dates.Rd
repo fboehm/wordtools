@@ -19,4 +19,3 @@ a date vector
 \description{
 Extract dates from lexis nexis downloads
 }
-

@@ -17,4 +17,3 @@ a logical vector
 \description{
 Returns a logical to indicate whether input is a date, per a specific format
 }
-

@@ -12,4 +12,3 @@ extract_hashtags(text)
 \description{
 Extract hashtags from a vector of tweets
 }
-
