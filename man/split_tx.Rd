@@ -9,7 +9,7 @@ split_tx(tx, pattern)
 \arguments{
 \item{tx}{a character vector resulting from scan() of a text file containing multiple articles}
 
-\item{patt}{a character vector that is the pattern denoting the end of each article/story}
+\item{pattern}{a character vector that is the pattern denoting the end of each article/story}
 }
 \value{
 a list with length equal to the number of distinct articles

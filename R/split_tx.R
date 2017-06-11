@@ -1,7 +1,7 @@
 #' Partition a text file, containing multiple articles or transcripts, into distinct articles
 #'
 #' @param tx a character vector resulting from scan() of a text file containing multiple articles
-#' @param patt a character vector that is the pattern denoting the end of each article/story
+#' @param pattern a character vector that is the pattern denoting the end of each article/story
 #' @return a list with length equal to the number of distinct articles
 #' @export
 #'
